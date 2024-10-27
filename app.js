@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('connect-btn').addEventListener('click', () => {
         // Redirect to Calendly OAuth login page
-        window.location.href = `https://auth.calendly.com/oauth/authorize?client_id=4pp2Zwv1i2E6Fmb0S3MDvJLJP0YAfzlEaTOfLG9eglg&response_type=code&redirect_uri=http://localhost:5500&scope=default`;
+        window.location.href = `https://auth.calendly.com/oauth/authorize?client_id=4pp2Zwv1i2E6Fmb0S3MDvJLJP0YAfzlEaTOfLG9eglg&response_type=code&redirect_uri=https://kiddyblaze.github.io/meeting-dashboard/&scope=default`;
+
     });
 });
 
@@ -37,7 +38,7 @@ function fetchAccessToken(authCode) {
             client_id: '4pp2Zwv1i2E6Fmb0S3MDvJLJP0YAfzlEaTOfLG9eglg',
             client_secret: '2Tjvkld_YGaM4n1Df4uNpypcQDMxqzwRwYSFnZ9XYU8',
             code: authCode,
-            redirect_uri: 'http://localhost:5500',
+            redirect_uri: 'https://kiddyblaze.github.io/meeting-dashboard/',
         }),
     })
     .then(response => response.json())
